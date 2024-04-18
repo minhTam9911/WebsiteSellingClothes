@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Commond.Exceptions;
-internal class ExceptionHandler
+namespace Application.DTOs.Responses;
+internal class ContactResponseDto
 {
 }

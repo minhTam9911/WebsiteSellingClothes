@@ -5,6 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Application.Features.RoleFeatures.Commands.Create;
-internal class CreateRoleCommandValidation
+public class CreateRoleCommandValidation 
 {
 }

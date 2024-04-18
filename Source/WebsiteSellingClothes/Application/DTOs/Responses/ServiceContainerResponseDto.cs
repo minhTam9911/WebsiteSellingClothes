@@ -5,6 +5,4 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Application.DTOs.Responses;
-internal class RoleResponse
-{
-}
+public record ServiceContainerResponseDto(int Status,bool Flag, string Message = null!);

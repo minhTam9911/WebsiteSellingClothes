@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jTu0cCXS4mzyJen1tZDgdRV6mQ/rr5A4zdw1AsTvMw0u6LlQtqvmp/9INfU/dRy9oXety5soWGzy+6savblstA==",
+  "dgSpecHash": "pmhvKyf1PbXUyvuT4wSyrgcBKL0/IGGChSG/gP0enQ8SdhSHxJpxvRI3qub4A8T5Pz9xY1ke6cGhLakpmKjpkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\minht\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\minht\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\minht\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\minht\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\minht\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\minht\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\minht\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
