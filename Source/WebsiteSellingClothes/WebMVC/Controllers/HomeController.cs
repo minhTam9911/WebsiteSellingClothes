@@ -3,6 +3,7 @@ using System.Diagnostics;
 using WebMVC.Models;
 
 namespace WebMVC.Controllers;
+[Route("Home")]
 public class HomeController : Controller
 {
 	private readonly ILogger<HomeController> _logger;
@@ -11,11 +12,16 @@ public class HomeController : Controller
 	{
 		_logger = logger;
 	}
-
+	[Route("index")]
 	public IActionResult Index()
 	{
-		return View();
-	}
+        string data = "";
+        for (int i = 0; i < 2000; i++)
+        {
+            data += "a";
+        }
+        return Ok(data);
+    }
 
 	public IActionResult Privacy()
 	{

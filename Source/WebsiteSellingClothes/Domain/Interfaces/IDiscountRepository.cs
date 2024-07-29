@@ -1,20 +1,16 @@
-﻿using Domain.DTOs.Requests;
-using Domain.DTOs.Responses;
+﻿
 using Domain.Entities;
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Common.DTOs;
 
 namespace Domain.Interfaces;
 public interface IDiscountRepository
 {
-	Task<Discount?> InsertAsync(Discount discount);
+	Task<Discount?> InsertAsync(Discount discount, int[] productsId);
 	Task<int> DeleteAsync(string id);
-	Task<Discount?> UpdateAsync(string id, Discount discount);
+	Task<Discount?> UpdateAsync(string id, Discount discount, int[]? productsId);
 	Task<List<Discount>?> GetAllAsync();
 	Task<Discount?> GetByIdAsync(string id);
-	Task<PagedListResponseDto<Discount?>> GetListAsync(FilterRequestDto filter);
+	Task<PagedListDto<Discount>?> GetListAsync(FilterDto filter);
+	Task<PagedListDto<Discount>?> GetAllActiveAsync(bool isActive, int pageSize, int pageIndex);
+	Task<Discount?> UpdateQuantityAsync(string id, int quantity);
 }

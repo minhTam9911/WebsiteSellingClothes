@@ -1,16 +1,11 @@
 ﻿using Application.DTOs.Responses;
 using AutoMapper;
-using Domain.DTOs.Responses;
+using Common.DTOs;
 using Domain.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Features.Roles.Queries.GetAll;
-public class GetAllRoleQueryHandler : IRequestHandler<GetAllRoleQuery, PagedListResponseDto<RoleResponseDto>>
+public class GetAllRoleQueryHandler : IRequestHandler<GetAllRoleQuery, List<RoleResponseDto>>
 {
 	public readonly IRoleRepository roleRepository;
 	public readonly IMapper mapper;
@@ -21,16 +16,10 @@ public class GetAllRoleQueryHandler : IRequestHandler<GetAllRoleQuery, PagedList
 		this.mapper = mapper;
 	}
 
-	public async Task<PagedListResponseDto<RoleResponseDto>> Handle(GetAllRoleQuery request, CancellationToken cancellationToken)
+	public async Task<List<RoleResponseDto>> Handle(GetAllRoleQuery request, CancellationToken cancellationToken)
 	{
-		var roles = await roleRepository.GetListAsync(request.FilterRequestDto!);
-		var data = new PagedListResponseDto<RoleResponseDto>
-		{
-			PageIndex = roles.PageIndex,
-			PageSize = roles.PageSize,
-			TotalCount = roles.TotalCount,
-			Items = mapper.Map<List<RoleResponseDto>>(roles.Items)
-		};
+		var roles = await roleRepository.GetAllAsync();
+		var data = mapper.Map<List<RoleResponseDto>>(roles);
 		return data;
 	}
 }

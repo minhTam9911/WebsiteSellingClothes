@@ -1,23 +1,18 @@
-﻿using Application.DTOs.Responses;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Application.DTOs.Requests;
 public class OrderRequestDto
 {
-	[Range(1, int.MaxValue, ErrorMessage = "The transaction must be between 1 and infinity")]
-	public int TransactionId { get; set; }
-
-	[Range(1, int.MaxValue, ErrorMessage = "The quantity must be between 1 and infinity")]
-	public int Quantity { get; set; }
-
-	[Range(0.01, double.MaxValue, ErrorMessage = "The category must be between 0.01 and infinity")]
-	public decimal Amount { get; set; }
-
-	[Required(ErrorMessage ="The status is required")]
-	public string Status { get; set; } = string.Empty;
+    [Required(ErrorMessage ="The carts id is required")]
+    public int[]? CartIds { get; set; }
+    [Required(ErrorMessage = "The address is required")]
+    [MaxLength(256, ErrorMessage = "The address must be a maximum of 256 characters in length")]
+    public string Address { get; set; } = string.Empty;
+    public string? DiscountId { get; set; } = string.Empty;
+    public string PaymentDestinationId { get; set; } = "DEST001";
+    public string PaymentCurrency { get; set; } = "VND";
+    public string MerchantId { get; set; } = "MER001";
+    public string PaymentLanguage { get; set; } = "vn";
+    public string Note { get; set; } = string.Empty;
 }
+

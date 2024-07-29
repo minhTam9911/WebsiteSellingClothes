@@ -26,7 +26,7 @@ public class CreateRoleCommandHandler : IRequestHandler<CreateRoleCommand, Servi
 	{
 		var role = mapper.Map<Role>(request.RoleRequestDto);
 		var result = await roleRepository.InsertAsync(role);
-		if (result != null) return new ServiceContainerResponseDto((int)HttpStatusCode.Created,true,"Inserted");
-		return new ServiceContainerResponseDto((int)HttpStatusCode.InternalServerError,false, "Error");
+		if (result == null) return new ServiceContainerResponseDto((int)HttpStatusCode.InternalServerError,false, "Error");
+		return new ServiceContainerResponseDto((int)HttpStatusCode.OK,true,"Inserted");
 	}
 }

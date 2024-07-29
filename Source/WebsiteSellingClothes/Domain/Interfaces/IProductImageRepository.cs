@@ -1,11 +1,6 @@
-﻿using Domain.DTOs.Requests;
-using Domain.DTOs.Responses;
+﻿
 using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Common.DTOs;
 
 namespace Domain.Interfaces;
 public interface IProductImageRepository
@@ -16,6 +11,8 @@ public interface IProductImageRepository
 	Task<ProductImage?> UpdateAsync(int id, ProductImage productImage);
 	Task<List<ProductImage>?> GetAllAsync();
 	Task<ProductImage?> GetByIdAsync(int id);
-	Task<PagedListResponseDto<ProductImage>?> GetListAsync(FilterRequestDto filter);
+    Task<List<ProductImage>?> GetByProductIdAsync(int idProduct);
+    Task<List<ProductImage>?> GetByProductCodeAsync(string codeProduct);
+    Task<PagedListDto<ProductImage>?> GetListAsync(FilterDto filter);
 
 }

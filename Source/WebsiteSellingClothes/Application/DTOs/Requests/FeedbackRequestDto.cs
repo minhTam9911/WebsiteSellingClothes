@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace Application.DTOs.Requests;
 public class FeedbackRequestDto
 {
-	[Range(1,int.MaxValue,ErrorMessage = "The product must be between 1 and Infinity.")]
+	[Range(0,int.MaxValue,ErrorMessage = "The product must be between 1 and Infinity.")]
 	public int ProductId { get; set; }
 
-	[Range(1,5,ErrorMessage = "The rating must be between 1 and 5.")]
+	[Range(1,10,ErrorMessage = "The rating must be between 1 and 10. only integer")]
 	public int Rating { get; set; }
 
 	[Required(ErrorMessage = "The Comment is required")]

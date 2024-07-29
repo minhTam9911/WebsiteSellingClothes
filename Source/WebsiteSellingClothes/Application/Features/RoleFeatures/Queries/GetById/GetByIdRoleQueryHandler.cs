@@ -1,6 +1,5 @@
 ﻿using Application.DTOs.Responses;
 using AutoMapper;
-using Domain.DTOs.Responses;
 using Domain.Interfaces;
 using MediatR;
 using System;
@@ -23,8 +22,8 @@ public class GetByIdRoleQueryHandler : IRequestHandler<GetByIdRoleQuery, RoleRes
 
 	public async Task<RoleResponseDto> Handle(GetByIdRoleQuery request, CancellationToken cancellationToken)
 	{
-		var roles = await roleRepository.GetByIdAsync(request.Id);
-		var data = mapper.Map<RoleResponseDto>(roles);
+		var role = await roleRepository.GetByIdAsync(request.Id);
+		var data = mapper.Map<RoleResponseDto>(role);
 		return data;
 	}
 }

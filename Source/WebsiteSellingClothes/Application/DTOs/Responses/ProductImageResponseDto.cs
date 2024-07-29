@@ -10,6 +10,7 @@ public class ProductImageResponseDto
 {
 	public int Id { get; set; }
 	public string Path { get; set; } = string.Empty;
+	public int ProductId { get; set; }
 	public DateTime CreatedDate { get; set; }
 	public DateTime UpdatedDate { get; set; }
 }

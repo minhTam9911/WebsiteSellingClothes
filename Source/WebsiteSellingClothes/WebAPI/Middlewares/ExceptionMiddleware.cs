@@ -37,7 +37,7 @@ public class ExceptionMiddleware
 		{
 			Status = context.Response.StatusCode,
 			Type = "Server Error",
-			Message = ex.Message,
+			Error = ex.Message,
 			Instanse = "API",
 			Title = "API Error"
 		};

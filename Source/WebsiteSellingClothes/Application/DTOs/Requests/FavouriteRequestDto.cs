@@ -10,5 +10,5 @@ namespace Application.DTOs.Requests;
 public class FavouriteRequestDto
 {
 	[Required(ErrorMessage ="The product is required")]
-	public int? ProductId { get; set; }
+	public int ProductId { get; set; }
 }

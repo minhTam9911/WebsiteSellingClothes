@@ -1,19 +1,14 @@
-﻿using Domain.DTOs.Requests;
-using Domain.DTOs.Responses;
+﻿
 using Domain.Entities;
+using Common.DTOs;
 using Domain.Interfaces;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories;
 public class RoleRepository : IRoleRepository
@@ -44,7 +39,7 @@ public class RoleRepository : IRoleRepository
 		return await appDbContext.Roles.FirstOrDefaultAsync(x => x.Id == id);
 	}
 
-	public async Task<PagedListResponseDto<Role>?> GetListAsync(FilterRequestDto filter)
+	public async Task<PagedListDto<Role>?> GetListAsync(FilterDto filter)
 	{
 		IQueryable<Role> query;
 		if (string.IsNullOrWhiteSpace(filter.Keyword))
@@ -89,23 +84,23 @@ public class RoleRepository : IRoleRepository
 		if (filter.PageSize == -1)
 		{
 			var data = await GetAllAsync();
-			return new PagedListResponseDto<Role>()
+			return new PagedListDto<Role>()
 			{
 				TotalCount = data!.Count(),
 				PageSize = filter.PageSize,
 				PageIndex = filter.PageIndex,
-				Items = data
+				Data = data
 			};
 		}
 		var totalCount = await query.CountAsync();
 		var totalPage = (int)Math.Ceiling(totalCount / (double)filter.PageSize);
 		var pageRoles = await query.Skip((filter.PageIndex-1)*filter.PageSize).Take(filter.PageSize).ToListAsync();
-		return new PagedListResponseDto<Role>()
+		return new PagedListDto<Role>()
 		{
 			TotalCount = totalCount,
 			PageSize = filter.PageSize,
 			PageIndex = filter.PageIndex,
-			Items = pageRoles
+			Data = pageRoles
 		};
 	}
 

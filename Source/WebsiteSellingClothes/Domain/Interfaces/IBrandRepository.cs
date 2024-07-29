@@ -1,5 +1,4 @@
-﻿using Domain.DTOs.Requests;
-using Domain.DTOs.Responses;
+﻿using Common.DTOs;
 using Domain.Entities;
 using Microsoft.AspNetCore.Http;
 
@@ -11,6 +10,6 @@ public interface IBrandRepository
 	Task<Brand?> UpdateAsync(int id, Brand brand, IFormFile? image);
 	Task<List<Brand>?> GetAllAsync();
 	Task<Brand?> GetByIdAsync(int id);
-	Task<PagedListResponseDto<Brand>?> GetListAsync(FilterRequestDto filter);
-	Task<Brand?> GetByStatus(bool isActive);
+	Task<PagedListDto<Brand>?> GetListAsync(FilterDto filter);
+	Task<PagedListDto<Brand>?> GetAllActiveAsync(bool isActive, int pageSize, int pageIndex);
 }

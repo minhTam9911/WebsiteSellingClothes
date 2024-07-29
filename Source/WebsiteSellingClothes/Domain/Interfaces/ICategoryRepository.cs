@@ -1,12 +1,6 @@
-﻿using Domain.DTOs.Requests;
-using Domain.DTOs.Responses;
-using Domain.Entities;
+﻿using Domain.Entities;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Common.DTOs;
 
 namespace Domain.Interfaces;
 public interface ICategoryRepository
@@ -16,5 +10,6 @@ public interface ICategoryRepository
 	Task<Category?> UpdateAsync(int id, Category category, IFormFile? image);
 	Task<List<Category>?> GetAllAsync();
 	Task<Category?> GetByIdAsync(int id);
-	Task<PagedListResponseDto<Category>?> GetListAsync(FilterRequestDto filter);
+	Task<PagedListDto<Category>?> GetListAsync(FilterDto filter);
+	Task<PagedListDto<Category>?> GetAllActiveAsync(bool isActive, int pageSize, int pageIndex);
 }

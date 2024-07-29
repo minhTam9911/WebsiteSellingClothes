@@ -9,7 +9,7 @@ namespace Application.DTOs.Requests;
 public class LoginRequestDto
 {
 	[Required(ErrorMessage = "The username is required")]
-	public string UserName { get; set; } = string.Empty;
+	public string Username { get; set; } = string.Empty;
 	[Required(ErrorMessage = "The password is required")]
 	public string Password { get; set; } = string.Empty;
 

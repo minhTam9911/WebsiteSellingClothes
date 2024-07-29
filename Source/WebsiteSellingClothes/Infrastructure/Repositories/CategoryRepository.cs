@@ -1,9 +1,9 @@
-﻿using Domain.DTOs.Requests;
-using Domain.DTOs.Responses;
+﻿
 using Domain.Entities;
+using Common.DTOs;
 using Domain.Interfaces;
 using Infrastructure.Data;
-using Infrastructure.Helpers;
+using Common.Helpers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -45,13 +45,24 @@ public class CategoryRepository : ICategoryRepository
 	{
 		return await appDbContext.Categories.FirstOrDefaultAsync(x => x.Id == id);
 	}
-
-	public async Task<Category?> GetByStatus(bool isActive)
+	public async Task<PagedListDto<Category>?> GetAllActiveAsync(bool isActive, int pageSize, int pageIndex)
 	{
-		return await appDbContext.Categories.FirstOrDefaultAsync(x => x.IsActive == isActive);
+        if (pageIndex == 0) pageIndex = 1;
+        if (pageSize == 0) pageSize = 5;
+        IQueryable<Category> query = appDbContext.Categories.Where(x => x.IsActive == isActive);
+		var totalCount = await query.CountAsync();
+		var totalPage = (int)Math.Ceiling(totalCount / (double)pageSize);
+		var pageCategories = await query.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToListAsync();
+		return new PagedListDto<Category>()
+		{
+			TotalCount = totalCount,
+			PageSize = pageSize,
+			PageIndex = pageIndex,
+			Data = pageCategories
+		};
 	}
 
-	public async Task<PagedListResponseDto<Category>?> GetListAsync(FilterRequestDto filter)
+	public async Task<PagedListDto<Category>?> GetListAsync(FilterDto filter)
 	{
 		IQueryable<Category> query;
 		if (string.IsNullOrWhiteSpace(filter.Keyword))
@@ -95,32 +106,32 @@ public class CategoryRepository : ICategoryRepository
 		}
 		if (filter.PageSize == -1)
 		{
-			var data = await GetAllAsync();
-			return new PagedListResponseDto<Category>()
+			var data = await query.ToListAsync();
+            return new PagedListDto<Category>()
 			{
 				TotalCount = data!.Count(),
 				PageSize = filter.PageSize,
 				PageIndex = filter.PageIndex,
-				Items = data!
+				Data = data!
 			};
 		}
 		var totalCount = await query.CountAsync();
 		var totalPage = (int)Math.Ceiling(totalCount / (double)filter.PageSize);
 		var pageCategories = await query.Skip((filter.PageIndex - 1) * filter.PageSize).Take(filter.PageSize).ToListAsync();
-		return new PagedListResponseDto<Category>()
+		return new PagedListDto<Category>()
 		{
 			TotalCount = totalCount,
 			PageSize = filter.PageSize,
 			PageIndex = filter.PageIndex,
-			Items = pageCategories
+			Data = pageCategories
 		};
 	}
 
 	public async Task<Category?> InsertAsync(Category category, IFormFile image)
 	{
-		if (await appDbContext.Brands.FirstOrDefaultAsync(x => x.Name.ToLower() == category.Name.ToLower()) != null)
+		if (await appDbContext.Categories.FirstOrDefaultAsync(x => x.Name.ToLower() == category.Name.ToLower()) != null)
 		{
-			return null;
+			throw new BadHttpRequestException("Name already exist");
 		}
 		category.Name = category.Name.Trim();
 		category.Description = category.Description.Trim();
@@ -153,13 +164,14 @@ public class CategoryRepository : ICategoryRepository
 		categoryModel.Name = category.Name.Trim();
 		categoryModel.Description = category.Description.Trim();
 		categoryModel.UpdatedDate = DateTime.Now;
+		categoryModel.IsActive = category.IsActive;
 		if (image != null)
 		{
 			if (!FileHelper.IsImage(image))
 			{
 				throw new IOException("Invalid file");
 			}
-			var pathDelete = Path.Combine(webHostEnvironment.WebRootPath, "categories", categoryModel.Image);
+			var pathDelete = Path.Combine(webHostEnvironment.WebRootPath, "categories", categoryModel.Image!);
 			File.Delete(pathDelete);
 			var fileName = FileHelper.GenerateFileName(image.FileName);
 			var path = Path.Combine(webHostEnvironment.WebRootPath, "categories", fileName);

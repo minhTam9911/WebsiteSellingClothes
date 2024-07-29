@@ -15,9 +15,9 @@ public class UserResponseDto
 	public string Email { get; set; } = string.Empty;
 	public string Username { get; set; } = string.Empty;
 	public string Gender { get; set; } = string.Empty;
-	public DateTime DateOfBirth { get; set; }
+	public DateTime DateOfBirth { get; set; } = DateTime.Now;
 	public bool IsActive { get; set; }
-	public virtual RoleResponseDto? Role { get; set; }
+	public int RoleId { get; set; }
 	public string Image { get; set; } = string.Empty;
 	public DateTime CreatedDate { get; set; }
 	public DateTime UpdatedDate { get; set; }

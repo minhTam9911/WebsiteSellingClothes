@@ -16,7 +16,7 @@ public class DiscountRequestDto
 	[Required(ErrorMessage = "The percentage is required")]
 	[Range(0.01,100.0,ErrorMessage = "The percentage must be between 0.01 and 100")]
 	public decimal Percentage { get; set; }
-	[Range(1, int.MaxValue, ErrorMessage = "The Quantity must be between1 and infinity")]
+	[Range(1, int.MaxValue, ErrorMessage = "The Quantity must be between 1 and infinity")]
 	public int Quantity { get; set; }
 	[Required(ErrorMessage ="The start date is required")]
 	public DateTime StartDate { get; set; }

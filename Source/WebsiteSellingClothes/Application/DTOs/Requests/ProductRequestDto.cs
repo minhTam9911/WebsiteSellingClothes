@@ -32,16 +32,20 @@ public class ProductRequestDto
 	[Range(1,int.MaxValue,ErrorMessage = "The price must be between 1 and infinity")]
 	public int Quantity { get; set; }
 
-	[Required(ErrorMessage = "The description is required")]
-	[MaxLength(2000, ErrorMessage = "The description must be a maximum of 2000 characters in length")]
-	public string Description { get; set; } = string.Empty;
+	[Required(ErrorMessage = "The short description is required")]
+	[MaxLength(500, ErrorMessage = "The short description must be a maximum of 500 characters in length")]
+	public string ShortDescription { get; set; } = string.Empty;
 
-	public bool IsActive { get; set; }
+    [Required(ErrorMessage = "The long description is required")]
+    [MaxLength(20000, ErrorMessage = "The long description must be a maximum of 20000 characters in length")]
+    public string LongDescription { get; set; } = string.Empty;
 
-	[Range(1, int.MaxValue, ErrorMessage = "The brand must be between 1 and infinity")]
+    public bool IsActive { get; set; }
+
+	[Range(0, int.MaxValue, ErrorMessage = "The brand must be between 1 and infinity")]
 	public int BrandId { get; set; }
 
-	[Range(1, int.MaxValue, ErrorMessage = "The category must be between 1 and infinity")]
+	[Range(0, int.MaxValue, ErrorMessage = "The category must be between 1 and infinity")]
 	public int CategoryId { get; set; }
 
 	//[Required(ErrorMessage ="The list image is required")]

@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 namespace Application.DTOs.Responses;
 public class DiscountResponseDto
 {
-	public string Id { get; set; }
-	public ICollection<ProductResponseDto>? Product { get; set; } = new List<ProductResponseDto>();
+	public string Id { get; set; } = string.Empty;
+	public ICollection<int>? ProductsId { get; set; } = new List<int>();
 	public decimal Percentage { get; set; }
+	public int Quantity { get; set; }
 	public DateTime StartDate { get; set; }
 	public DateTime EndDate { get; set; }
 	public DateTime CreatedDate { get; set; }

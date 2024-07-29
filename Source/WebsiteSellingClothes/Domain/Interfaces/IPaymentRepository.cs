@@ -1,5 +1,4 @@
-﻿using Domain.DTOs.Requests;
-using Domain.DTOs.Responses;
+﻿using Common.DTOs;
 using Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,10 +9,12 @@ using System.Threading.Tasks;
 namespace Domain.Interfaces;
 public interface IPaymentRepository
 {
-	Task<Payment?> InsertAsync(Payment payment);
-	Task<int> DeleteAsync(int id);
-	Task<Payment?> UpdateAsync(int id, Payment payment);
-	Task<List<Payment>?> GetAllAsync();
-	Task<Payment?> GetByIdAsync(int id);
-	Task<PagedListResponseDto<Payment>?> GetListAsync(FilterRequestDto filter);
+    Task<Payment?> InsertAsync(Payment payment,Order order, Guid userId);
+    Task<Payment?> UpdateAsync(string id, Payment payment);
+    Task<int> DeleteAsync(string id);
+    Task<List<Payment>?> GetAllAsync();
+    Task<PagedListDto<Payment?>> GetListAsync(FilterDto filterDto);
+    Task<PagedListDto<Payment?>> GetAllForMeAsync(Guid userId, FilterDto filterDto);
+    Task<Payment?> GetByIdAsync(string id);
+    Task<int> SetPaidAsync(string id, decimal paidAmount);
 }

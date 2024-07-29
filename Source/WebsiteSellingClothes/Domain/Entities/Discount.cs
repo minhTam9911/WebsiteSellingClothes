@@ -11,7 +11,7 @@ public class Discount
 {
 	[Key]
 	public string Id { get; set; } = string.Empty;
-	public virtual ICollection<Product>? Product { get; set; } = new List<Product>();
+	public virtual ICollection<Product>? Products { get; set; } = new List<Product>();
 	public decimal Percentage { get; set; }
 	public int Quantity { get; set; }
 	public DateTime StartDate { get; set; }

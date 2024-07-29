@@ -41,5 +41,5 @@ public class UserRequestDto
 	public DateTime DateOfBirth { get; set; }
 
 	//[Required(ErrorMessage ="The file is required")]
-	public IFormFile? Image { get; set; } 
+	//public IFormFile? Image { get; set; } 
 }

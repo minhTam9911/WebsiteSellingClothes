@@ -1,9 +1,9 @@
-﻿using Domain.DTOs.Requests;
-using Domain.DTOs.Responses;
+﻿
 using Domain.Entities;
+using Common.DTOs;
 using Domain.Interfaces;
 using Infrastructure.Data;
-using Infrastructure.Helpers;
+
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +11,7 @@ using System.Data;
 using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
+using Common.Helpers;
 
 namespace Infrastructure.Repositories;
 public class BrandRepository : IBrandRepository
@@ -43,12 +44,25 @@ public class BrandRepository : IBrandRepository
 		return await appDbContext.Brands.FirstOrDefaultAsync(x => x.Id == id);
 	}
 
-	public async Task<Brand?> GetByStatus(bool isActive)
+	public async Task<PagedListDto<Brand>?> GetAllActiveAsync(bool isActive, int pageSize, int pageIndex)
 	{
-		return await appDbContext.Brands.FirstOrDefaultAsync(x => x.IsActive == isActive);
+		if (pageIndex == 0) pageIndex = 1;
+		if(pageSize == 0) pageSize = 5;
+		IQueryable<Brand> query;
+        query = appDbContext.Brands.Where(x => x.IsActive == isActive);
+        var totalCount = await query.CountAsync();
+		var totalPage = (int)Math.Ceiling(totalCount / (double)pageSize);
+		var pageBrands = await query.Skip((pageIndex - 1) *pageSize).Take(pageSize).ToListAsync();
+		return new PagedListDto<Brand>()
+		{
+			TotalCount = totalCount,
+			PageSize = pageSize,
+			PageIndex =pageIndex,
+			Data = pageBrands
+		};
 	}
 
-	public async Task<PagedListResponseDto<Brand>?> GetListAsync(FilterRequestDto filter)
+	public async Task<PagedListDto<Brand>?> GetListAsync(FilterDto filter)
 	{
 		IQueryable<Brand> query;
 		if (string.IsNullOrWhiteSpace(filter.Keyword))
@@ -92,24 +106,24 @@ public class BrandRepository : IBrandRepository
 		}
 		if (filter.PageSize == -1)
 		{
-			var data = await GetAllAsync();
-			return new PagedListResponseDto<Brand>()
+			var data = await query.ToListAsync();
+			return new PagedListDto<Brand>()
 			{
 				TotalCount = data!.Count(),
 				PageSize = filter.PageSize,
 				PageIndex = filter.PageIndex,
-				Items = data!
+				Data = data!
 			};
 		}
 		var totalCount = await query.CountAsync();
 		var totalPage = (int)Math.Ceiling(totalCount / (double)filter.PageSize);
 		var pageBrands = await query.Skip((filter.PageIndex - 1) * filter.PageSize).Take(filter.PageSize).ToListAsync();
-		return new PagedListResponseDto<Brand>()
+		return new PagedListDto<Brand>()
 		{
 			TotalCount = totalCount,
 			PageSize = filter.PageSize,
 			PageIndex = filter.PageIndex,
-			Items = pageBrands
+			Data = pageBrands
 		};
 	}
 
@@ -119,6 +133,8 @@ public class BrandRepository : IBrandRepository
 		{
 			throw new BadHttpRequestException("Name already exist");
 		}
+		brand.Name = brand.Name.Trim();
+		brand.Description = brand.Description.Trim();
 		brand.CreatedDate = DateTime.Now;
 		brand.UpdatedDate = DateTime.Now;
 		if (!FileHelper.IsImage(image))
@@ -145,8 +161,9 @@ public class BrandRepository : IBrandRepository
 		{
 			throw new BadHttpRequestException("Name already exist");
 		}
-		brandModel.Name = brand.Name;
-		brandModel.Description = brand.Description;
+		brandModel.Name = brand.Name.Trim();
+		brandModel.IsActive = brand.IsActive;
+		brandModel.Description = brand.Description.Trim();
 		brandModel.UpdatedDate = DateTime.Now;
 		if(image != null)
 		{
