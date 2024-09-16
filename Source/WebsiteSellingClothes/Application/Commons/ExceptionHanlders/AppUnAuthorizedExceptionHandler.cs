@@ -17,7 +17,7 @@ public class AppUnAuthorizedExceptionHandler : IExceptionHandler
 		{
 			var error = new ErrorDetailResponseDto()
 			{
-				Status = StatusCodes.Status403Forbidden,
+				Status = StatusCodes.Status401Unauthorized,
 				Type = exception.GetType().Name,
                 Error = exception.Message,
 				Instanse = "API",

@@ -17,13 +17,28 @@ namespace Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.3")
+                .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Proxies:ChangeTracking", false)
                 .HasAnnotation("Proxies:CheckEquality", false)
                 .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("DiscountProduct", b =>
+                {
+                    b.Property<string>("DiscountsId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("DiscountsId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("DiscountProduct");
+                });
 
             modelBuilder.Entity("Domain.Entities.Brand", b =>
                 {
@@ -314,14 +329,14 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = "MER001",
-                            CreateDate = new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6924),
+                            CreateDate = new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(7262),
                             IsActive = true,
                             MerchantIpnUrl = "https://www.mywebsite.com/ipn",
                             MerchantName = "My Website",
                             MerchantReturnUrl = "https://www.mywebsite.com/return",
                             MerchantWebLink = "https://www.mywebsite.com",
                             SercetKey = "MIICWgIBAAKBgEyYcW79ojjWADa+6xnbjj8CInqsanIIRwO6mbefco7ivjksaQGM",
-                            UpdateDate = new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6925),
+                            UpdateDate = new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(7263),
                             UserId = new Guid("1c7b198d-d9f7-4fac-823c-dd6ea13e44de")
                         });
                 });
@@ -343,6 +358,10 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("DiscountId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -520,27 +539,6 @@ namespace Infrastructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Domain.Entities.PaymentMode", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PaymentModes");
-                });
-
             modelBuilder.Entity("Domain.Entities.PaymentNotification", b =>
                 {
                     b.Property<string>("Id")
@@ -577,10 +575,6 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("PaymentId")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("PaymentRefId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -679,9 +673,6 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DiscountId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -718,8 +709,6 @@ namespace Infrastructure.Migrations
                     b.HasIndex("BrandId");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("DiscountId");
 
                     b.ToTable("Products");
                 });
@@ -782,18 +771,18 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6532),
+                            Created = new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6733),
                             Description = "This is the highest authority",
                             Name = "Admin",
-                            Updated = new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6548)
+                            Updated = new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6749)
                         },
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6550),
+                            Created = new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6752),
                             Description = "This is the user's permission",
                             Name = "User",
-                            Updated = new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6550)
+                            Updated = new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6753)
                         });
                 });
 
@@ -879,7 +868,7 @@ namespace Infrastructure.Migrations
                         {
                             Id = new Guid("1c7b198d-d9f7-4fac-823c-dd6ea13e44de"),
                             Address = "TP HCM",
-                            CreatedDate = new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6683),
+                            CreatedDate = new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6942),
                             DateOfBirth = new DateTime(2003, 7, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "minhtamceo1@gmail.com",
                             FullName = "Minh Tam",
@@ -892,9 +881,24 @@ namespace Infrastructure.Migrations
                             RoleId = 1,
                             SecurityCode = "",
                             TokenResetPassword = "",
-                            UpdatedDate = new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6870),
+                            UpdatedDate = new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(7162),
                             Username = "minhtamceo1"
                         });
+                });
+
+            modelBuilder.Entity("DiscountProduct", b =>
+                {
+                    b.HasOne("Domain.Entities.Discount", null)
+                        .WithMany()
+                        .HasForeignKey("DiscountsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Domain.Entities.Cart", b =>
@@ -1070,15 +1074,9 @@ namespace Infrastructure.Migrations
                         .WithMany()
                         .HasForeignKey("CategoryId");
 
-                    b.HasOne("Domain.Entities.Discount", "Discount")
-                        .WithMany("Products")
-                        .HasForeignKey("DiscountId");
-
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
-
-                    b.Navigation("Discount");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductImage", b =>
@@ -1097,11 +1095,6 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("RoleId");
 
                     b.Navigation("Role");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Discount", b =>
-                {
-                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("Domain.Entities.Order", b =>

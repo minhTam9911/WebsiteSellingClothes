@@ -1,18 +1,13 @@
 using Infrastructure;
 using Application;
-using System.Net;
-using Microsoft.AspNetCore.Diagnostics;
-using Application.DTOs.Responses;
-using WebAPI.Middlewares;
-using FluentValidation.AspNetCore;
-using System.Reflection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Application.Commons.Profiles;
 using Asp.Versioning;
 using Swashbuckle.AspNetCore.Filters;
 using System.Security.Claims;
+using System.Reflection;
+using Asp.Versioning.ApiExplorer;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -20,7 +15,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
+});
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddSwaggerGen(option =>
@@ -73,13 +71,24 @@ builder.Services.AddApiVersioning(option =>
     option.GroupNameFormat = "'v'V";
     option.SubstituteApiVersionInUrl = true;
 });
-var app = builder.Build();
 
+var app = builder.Build();
+var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
-	app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        foreach(var desc in provider.ApiVersionDescriptions)
+        {
+            options.SwaggerEndpoint($"/swagger/{desc.GroupName}/swagger.json",desc.GroupName.ToUpperInvariant());
+            //options.RoutePrefix = "api/documentation";
+            options.DefaultModelExpandDepth(2);
+            options.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None);
+            options.DisplayRequestDuration();
+        }
+    });
 }
 //app.UseExceptionHandler(appError => {
 
@@ -104,11 +113,14 @@ if (app.Environment.IsDevelopment())
 
 //app.UseExceptionHandler(_ => { });
 //app.UseMiddleware<ExceptionMiddleware>();
+app.UseRouting();
 app.UseApplication();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseStaticFiles();
+
 app.MapControllers();
+
 
 app.Run();

@@ -57,8 +57,8 @@ public class VnPayRequest
             }
         }
         string result = baseUrl + "?" + data.ToString();
-        var secureHash = HashHelper.HmacSHA512(secretKey, data.ToString().Remove(data.Length - 1, 1));
-        return result + "vnp_SecureHash=" + secureHash;
+        this.vnp_SecureHash = HashHelper.HmacSHA512(secretKey, data.ToString().Remove(data.Length - 1, 1));
+        return result + "vnp_SecureHash=" + vnp_SecureHash;
     }
 
 
@@ -80,6 +80,10 @@ public class VnPayRequest
         if (!string.IsNullOrWhiteSpace(vnp_TxnRef)) requestData.Add("vnp_TxnRef", vnp_TxnRef);
         
         if (!string.IsNullOrWhiteSpace(vnp_Version)) requestData.Add("vnp_Version", vnp_Version);
+    }
+    public string GetSignature()
+    {
+        return this.vnp_SecureHash;
     }
 
 }

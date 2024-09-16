@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.Requests;
+using Application.DTOs.Responses;
 using Application.Features.OrderFeatures.Commands.Create;
 using Application.Features.OrderFeatures.Queries.GetAll;
 using Application.Features.OrderFeatures.Queries.GetAllForMe;
@@ -16,17 +17,30 @@ namespace WebAPI.Controllers.V1;
 [ApiController]
 public class OrdersController : ApiControllerBase
 {
+    /// <summary>
+    /// This is the API used to get all order data
+    /// </summary>
+    /// <returns></returns>
     [Authorize(Policy = "AdminOnly")]
     [HttpGet]
+    [ProducesResponseType(typeof(List<OrderResponseDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ErrorValidationResponse), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> GetAll()
     {
         var data = await Meditor.Send(new GetAllOrderQuery());
-        if(data.Count>0) return Ok( new { data = data });
-        return BadRequest(new { data = data });
+        return Ok( new { data = data });
     }
-
+    /// <summary>
+    /// This is an API used to get data based on order IDs
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [Authorize]
     [HttpGet("{id}")]
+    [ProducesResponseType(typeof(ErrorValidationResponse), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ErrorValidationResponse), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(typeof(OrderResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ErrorValidationResponse), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> GetById(string id) {
 
         var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
@@ -35,16 +49,30 @@ public class OrdersController : ApiControllerBase
         return BadRequest(new { data = data });
     }
 
+    /// <summary>
+    /// This is an API used to get order data, filter and paginate it
+    /// </summary>
+    /// <param name="filterDto"></param>
+    /// <returns></returns>
     [Authorize(Policy = "AdminOnly")]
     [HttpGet("filter")]
+    [ProducesResponseType(typeof(PagedListDto<OrderResponseDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ErrorValidationResponse), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> GetList([FromQuery]FilterDto filterDto)
     {
         var data = await Meditor.Send(new GetListOrderQuery() { FilterDto = filterDto });
         return Ok(data);
     }
 
+    /// <summary>
+    /// This is the API used to get my order data
+    /// </summary>
+    /// <param name="filterDto"></param>
+    /// <returns></returns>
     [Authorize(Policy = "UserOnly")]
     [HttpGet("my-order")]
+    [ProducesResponseType(typeof(PagedListDto<OrderResponseDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ErrorValidationResponse), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> GetAllForMe([FromQuery]FilterDto filterDto)
     {
         var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);

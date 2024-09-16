@@ -26,11 +26,13 @@ public static class ConfigureService
 		
 		services.AddExceptionHandler<AppNotImplementedExceptionHandler>();
 		services.AddExceptionHandler<AppBadRequestExceptionHandler>();
-		services.AddExceptionHandler<AppExceptionHandler>();
+		services.AddExceptionHandler<AppSecurityTokenMalformedException>();
+	//	services.AddExceptionHandler<AppExceptionHandler>();
 		services.AddExceptionHandler<AppIOExceptionHandler>();
         services.AddExceptionHandler<AppEntityNotFoundExceptionHandler>();
         services.AddExceptionHandler<AppMethodNotAllowExceptionHandler>();
 		services.AddExceptionHandler<AppUnAuthorizedExceptionHandler>();
+        services.AddExceptionHandler<AppForbiddenExceptionHandler>();
         services.AddControllers()
                 .AddFluentValidation(options =>
                 {

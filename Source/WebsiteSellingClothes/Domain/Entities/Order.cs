@@ -21,4 +21,5 @@ public class Order
 	public DateTime CreateDate { get; set; }
 	public virtual ICollection<OrderDetail>? OrderDetails { get; set; } = new List<OrderDetail>();
 	public virtual Discount? Discount { get; set; }
+	public string Note { get; set; } = string.Empty;
 }

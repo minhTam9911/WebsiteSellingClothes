@@ -26,8 +26,9 @@ public class CreatePaymentCommandHandler : IRequestHandler<CreatePaymentCommand,
     private readonly IConfiguration configuration;
     private readonly IAuthRepository authRepository;
     private readonly IOrderRepository orderRepository;
+    private readonly IPaymentSignatureRepository paymentSignatureRepository;
 
-    public CreatePaymentCommandHandler(IPaymentRepository paymentRepository, IMapper mapper, IConfiguration configuration, IAuthRepository authRepository, IPaymentDestinationRepository paymentDestinationRepository, IMerchantRepository merchantRepository, IOrderRepository orderRepository)
+    public CreatePaymentCommandHandler(IPaymentRepository paymentRepository, IMapper mapper, IConfiguration configuration, IAuthRepository authRepository, IPaymentDestinationRepository paymentDestinationRepository, IMerchantRepository merchantRepository, IOrderRepository orderRepository, IPaymentSignatureRepository paymentSignatureRepository)
     {
         this.paymentRepository = paymentRepository;
         this.mapper = mapper;
@@ -36,6 +37,7 @@ public class CreatePaymentCommandHandler : IRequestHandler<CreatePaymentCommand,
         this.paymentDestinationRepository = paymentDestinationRepository;
         this.merchantRepository = merchantRepository;
         this.orderRepository = orderRepository;
+        this.paymentSignatureRepository = paymentSignatureRepository;
     }
 
     public async Task<DischargeWithDataResponseDto<PaymentLinkDto>> Handle(CreatePaymentCommand request, CancellationToken cancellationToken)
@@ -48,6 +50,13 @@ public class CreatePaymentCommandHandler : IRequestHandler<CreatePaymentCommand,
         var result = await paymentRepository.InsertAsync(payment,request.Order!, request.UserId);
         var paymentUrl = string.Empty;
         var message = string.Empty;
+        var paymentSignature = new PaymentSignature()
+        {
+            Id = string.Empty,
+            Payment = result,
+            SignatureDate = DateTime.Now,
+            SignatureOwn = result!.Merchant!.Id
+        };
         if (result == null)
         {
             var data = new DischargeWithDataResponseDto<PaymentLinkDto>()
@@ -82,6 +91,8 @@ public class CreatePaymentCommandHandler : IRequestHandler<CreatePaymentCommand,
                         
                         );
                     paymentUrl = vnPay.GetLink(configuration["VnPayOptions:PaymentUrl"]!, configuration["VnPayOptions:HashSecret"]!);
+                    paymentSignature.SignatureValue = vnPay.vnp_SecureHash;
+                    paymentSignature.SignatureAlgo = "HmacSHA512";
                     break;
                 case "DEST002":
                     var momo = new MomoOneTimePaymentRequest(
@@ -107,6 +118,8 @@ public class CreatePaymentCommandHandler : IRequestHandler<CreatePaymentCommand,
                     {
                         message = createMessage;
                     }
+                    paymentSignature.SignatureValue = momo.GetSignature();
+                    paymentSignature.SignatureAlgo = "HmacSHA256";
                     break;
                 case "DEST003":
                     var zalo = new ZaloPayRequest(
@@ -131,9 +144,13 @@ public class CreatePaymentCommandHandler : IRequestHandler<CreatePaymentCommand,
                     {
                         message = createMessageZaloPay;
                     }
+                    paymentSignature.SignatureValue = zalo.GetSignature();
+                    paymentSignature.SignatureAlgo = "HmacSHA256";
                     break;
+
                     
             }
+            await paymentSignatureRepository.InsertAsync(paymentSignature);
             var data = new DischargeWithDataResponseDto<PaymentLinkDto>()
             {
 

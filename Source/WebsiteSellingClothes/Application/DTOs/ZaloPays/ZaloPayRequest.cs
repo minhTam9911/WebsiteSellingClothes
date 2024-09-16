@@ -69,7 +69,7 @@ public class ZaloPayRequest
     public async Task<(bool, string)> GetLink(string paymentUrl)
     {
         using var httpClient = new HttpClient();
-       
+
         var requestData = JsonConvert.SerializeObject(this, new JsonSerializerSettings()
         {
 
@@ -97,6 +97,10 @@ public class ZaloPayRequest
         {
             return (false, createPaymentLinkResponse.ReasonPhrase)!;
         }
+    }
+    public string GetSignature()
+    {
+        return this.mac;
     }
 }
 

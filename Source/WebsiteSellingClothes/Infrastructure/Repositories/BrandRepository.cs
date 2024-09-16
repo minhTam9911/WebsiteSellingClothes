@@ -1,9 +1,7 @@
-﻿
-using Domain.Entities;
+﻿using Domain.Entities;
 using Common.DTOs;
 using Domain.Interfaces;
 using Infrastructure.Data;
-
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;

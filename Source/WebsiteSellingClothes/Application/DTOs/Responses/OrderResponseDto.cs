@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Application.DTOs.Responses;
 public class OrderResponseDto
 {
-    public string Id { get; set; }
+    public string Id { get; set; } = string.Empty;
     public string PaymentId { get; set; } = string.Empty;
     public string Address { get; set; } = string.Empty;
     public int Quantity { get; set; }

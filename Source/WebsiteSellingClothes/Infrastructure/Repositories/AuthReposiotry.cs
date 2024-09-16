@@ -4,6 +4,7 @@ using Domain.Entities;
 using Domain.Interfaces;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -22,12 +23,15 @@ public class AuthReposiotry : IAuthRepository
     private readonly AppDbContext appDbContext;
     private readonly IConfiguration configuration;
 
+
     public AuthReposiotry(AppDbContext appDbContext, IConfiguration configuration, IHttpContextAccessor contextAccessor)
     {
         this.appDbContext = appDbContext;
         this.configuration = configuration;
         this.contextAccessor = contextAccessor;
     }
+
+
 
     public async Task<int> ActiveAccountAsync(string email, string code)
     {
@@ -45,6 +49,7 @@ public class AuthReposiotry : IAuthRepository
         var user = await appDbContext.Users.FirstOrDefaultAsync(x=>x.TokenResetPassword == token);
         if (user == null) throw new BadHttpRequestException("User does not exist token");
         if (user.TokenResetPasswordExpires < DateTime.Now) throw new UnauthorizedAccessException("Token expires");
+        if (string.IsNullOrWhiteSpace(user.SecurityCode)) throw new UnauthorizedAccessException("You haven't taken the step to confirm the code. Request this step");
         user.TokenResetPassword = string.Empty;
         user.TokenResetPasswordExpires = DateTime.MinValue;
         user.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
@@ -87,6 +92,7 @@ public class AuthReposiotry : IAuthRepository
                        x.Username == username.Trim().ToLower() || x.Email == username.Trim().ToLower());
             
             if (user == null) throw new BadHttpRequestException("User does not exist");
+            
             if (!BCrypt.Net.BCrypt.Verify(password, user.Password)) throw new BadHttpRequestException("Password does not match");
             if (!user.IsActive) throw new BadHttpRequestException("The user is not yet activated");
             var accessToken = GenerateJwtToken(user);

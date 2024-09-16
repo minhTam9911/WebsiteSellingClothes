@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.Requests;
+using Application.DTOs.Responses;
 using Common.DTOs;
 using MediatR;
 using System;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Application.Features.AuthFeatures.Commands.RefreshToken;
-public class RefreshTokenCommand : IRequest<ApiDto>
+public class RefreshTokenCommand : IRequest<ApiDto?>
 {
 
     public RefreshTokenRequestDto? RefreshTokenRequestDto { get; set; }

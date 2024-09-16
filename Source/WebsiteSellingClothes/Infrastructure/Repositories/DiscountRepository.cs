@@ -160,6 +160,7 @@ public class DiscountRepository : IDiscountRepository
         if (discountModel == null) throw new BadHttpRequestException("Discount doesn't exist");
         discountModel.Percentage = discount.Percentage;
         discountModel.Quantity = discount.Quantity;
+        discountModel.EndDate = discount.EndDate;
         discountModel.UpdatedDate = DateTime.Now;
         if (productsId != null)
         {
@@ -187,12 +188,10 @@ public class DiscountRepository : IDiscountRepository
 
     public async Task<Discount?> UpdateQuantityAsync(string id, int quantity)
     {
-        var result = await appDbContext.Discounts.Where(x => x.Id == id).ExecuteUpdateAsync(setter => setter.SetProperty(d => d.Quantity, quantity));
-        if (result > 0)
-        {
-            var discount = await appDbContext.Discounts.FirstOrDefaultAsync(x => x.Id == id);
-            return discount!;
-        }
-        return null;
+        var discount = await appDbContext.Discounts.FirstOrDefaultAsync(x => x.Id == id);
+        discount!.Quantity = discount.Quantity - quantity;
+        appDbContext.Entry(discount).State = EntityState.Modified;
+        var result = await appDbContext.SaveChangesAsync();
+        return result > 0 ? discount : null;
     }
 }

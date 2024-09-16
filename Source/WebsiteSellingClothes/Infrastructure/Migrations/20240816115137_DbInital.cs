@@ -108,20 +108,6 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PaymentModes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PaymentModes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
@@ -156,8 +142,7 @@ namespace Infrastructure.Migrations
                     BrandId = table.Column<int>(type: "int", nullable: true),
                     CategoryId = table.Column<int>(type: "int", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DiscountId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -171,11 +156,6 @@ namespace Infrastructure.Migrations
                         name: "FK_Products_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Products_Discounts_DiscountId",
-                        column: x => x.DiscountId,
-                        principalTable: "Discounts",
                         principalColumn: "Id");
                 });
 
@@ -211,6 +191,30 @@ namespace Infrastructure.Migrations
                         column: x => x.RoleId,
                         principalTable: "Roles",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DiscountProduct",
+                columns: table => new
+                {
+                    DiscountsId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProductsId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DiscountProduct", x => new { x.DiscountsId, x.ProductsId });
+                    table.ForeignKey(
+                        name: "FK_DiscountProduct_Discounts_DiscountsId",
+                        column: x => x.DiscountsId,
+                        principalTable: "Discounts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DiscountProduct_Products_ProductsId",
+                        column: x => x.ProductsId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -324,7 +328,8 @@ namespace Infrastructure.Migrations
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DiscountId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    DiscountId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Note = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -457,7 +462,6 @@ namespace Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    PaymentRefId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NotificaitonDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     NotificationAmount = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NotificationContent = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -541,19 +545,19 @@ namespace Infrastructure.Migrations
                 columns: new[] { "Id", "Created", "Description", "Name", "Updated" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6532), "This is the highest authority", "Admin", new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6548) },
-                    { 2, new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6550), "This is the user's permission", "User", new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6550) }
+                    { 1, new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6733), "This is the highest authority", "Admin", new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6749) },
+                    { 2, new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6752), "This is the user's permission", "User", new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6753) }
                 });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Address", "CreatedDate", "DateOfBirth", "Email", "FullName", "Gender", "Image", "IsActive", "Password", "PhoneNumber", "RefeshTokenExpires", "RefreshToken", "RoleId", "SecurityCode", "TokenResetPassword", "TokenResetPasswordExpires", "UpdatedDate", "Username" },
-                values: new object[] { new Guid("1c7b198d-d9f7-4fac-823c-dd6ea13e44de"), "TP HCM", new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6683), new DateTime(2003, 7, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), "minhtamceo1@gmail.com", "Minh Tam", "Male", "", true, "$2y$12$9E2GHspbgnWShdr2gqpof.r9vHoBcQrZvZixUAEz7vKlBG47dUigS", "0816098920", null, "", 1, "", "", null, new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6870), "minhtamceo1" });
+                values: new object[] { new Guid("1c7b198d-d9f7-4fac-823c-dd6ea13e44de"), "TP HCM", new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(6942), new DateTime(2003, 7, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), "minhtamceo1@gmail.com", "Minh Tam", "Male", "", true, "$2y$12$9E2GHspbgnWShdr2gqpof.r9vHoBcQrZvZixUAEz7vKlBG47dUigS", "0816098920", null, "", 1, "", "", null, new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(7162), "minhtamceo1" });
 
             migrationBuilder.InsertData(
                 table: "Merchants",
                 columns: new[] { "Id", "CreateDate", "IsActive", "MerchantIpnUrl", "MerchantName", "MerchantReturnUrl", "MerchantWebLink", "SercetKey", "UpdateDate", "UserId" },
-                values: new object[] { "MER001", new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6924), true, "https://www.mywebsite.com/ipn", "My Website", "https://www.mywebsite.com/return", "https://www.mywebsite.com", "MIICWgIBAAKBgEyYcW79ojjWADa+6xnbjj8CInqsanIIRwO6mbefco7ivjksaQGM", new DateTime(2024, 7, 9, 7, 34, 16, 174, DateTimeKind.Local).AddTicks(6925), new Guid("1c7b198d-d9f7-4fac-823c-dd6ea13e44de") });
+                values: new object[] { "MER001", new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(7262), true, "https://www.mywebsite.com/ipn", "My Website", "https://www.mywebsite.com/return", "https://www.mywebsite.com", "MIICWgIBAAKBgEyYcW79ojjWADa+6xnbjj8CInqsanIIRwO6mbefco7ivjksaQGM", new DateTime(2024, 8, 16, 18, 51, 36, 443, DateTimeKind.Local).AddTicks(7263), new Guid("1c7b198d-d9f7-4fac-823c-dd6ea13e44de") });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Carts_OrderId",
@@ -569,6 +573,11 @@ namespace Infrastructure.Migrations
                 name: "IX_Carts_UserId",
                 table: "Carts",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DiscountProduct_ProductsId",
+                table: "DiscountProduct",
+                column: "ProductsId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Favourites_ProductId",
@@ -683,11 +692,6 @@ namespace Infrastructure.Migrations
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_DiscountId",
-                table: "Products",
-                column: "DiscountId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Users_RoleId",
                 table: "Users",
                 column: "RoleId");
@@ -703,6 +707,9 @@ namespace Infrastructure.Migrations
                 name: "Contacts");
 
             migrationBuilder.DropTable(
+                name: "DiscountProduct");
+
+            migrationBuilder.DropTable(
                 name: "Favourites");
 
             migrationBuilder.DropTable(
@@ -710,9 +717,6 @@ namespace Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "OrderDetails");
-
-            migrationBuilder.DropTable(
-                name: "PaymentModes");
 
             migrationBuilder.DropTable(
                 name: "PaymentNotifications");

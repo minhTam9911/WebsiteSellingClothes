@@ -192,7 +192,7 @@ public class AutoMapperProfile : Profile
         CreateMap<ProductImageRequestDto, ProductImage>();
         //.ForMember(dest => dest.Path, opt => opt.MapFrom(src => src.Path!.Trim()));
         CreateMap<ProductImage, ProductImageResponseDto>()
-            .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.Product.Id))
+            .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.Product!.Id))
             .ForMember(dest => dest.Path, opt => opt.MapFrom(src => BaseUrl("product") + src.Path));
         CreateMap<ProductRequestDto, Product>()
             .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name.Trim()))
@@ -200,7 +200,7 @@ public class AutoMapperProfile : Profile
             .ForMember(dest => dest.Color, opt => opt.MapFrom(src => src.Color.Trim()))
             .ForMember(dest => dest.Size, opt => opt.MapFrom(src => src.Size.Trim()))
             .ForMember(dest => dest.Purchase, opt => opt.MapFrom(src => 0))
-            .ForMember(dest => dest.LongDescription, opt => opt.MapFrom(src => src.ShortDescription.Trim()));
+            .ForMember(dest => dest.LongDescription, opt => opt.MapFrom(src => src.LongDescription.Trim()));
         CreateMap<Product, ProductResponseDto>()
             .ForMember(dest => dest.BrandId, opt => opt.MapFrom(src => src.Brand!.Id))
             .ForMember(dest => dest.BrandName, opt => opt.MapFrom(src => src.Brand!.Name))
@@ -219,8 +219,8 @@ public class AutoMapperProfile : Profile
             .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address.Trim()))
             .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName.Trim()));
         CreateMap<User, UserResponseDto>()
-            .ForMember(dest => dest.RoleId, opt => opt.MapFrom(src => src.Role!.Id));
-
+            .ForMember(dest => dest.RoleId, opt => opt.MapFrom(src => src.Role!.Id))
+            .ForMember(dest => dest.Image, opt=>opt.MapFrom(src=>string.IsNullOrWhiteSpace(src.Image)? "default-avatar.png" : src.Image));
 
     }
 

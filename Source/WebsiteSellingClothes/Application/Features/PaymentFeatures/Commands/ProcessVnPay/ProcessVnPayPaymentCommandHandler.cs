@@ -1,15 +1,15 @@
 ﻿using Application.DTOs.Responses;
 using Application.DTOs.VnPays;
 using AutoMapper;
+using Common.Helpers;
+using Domain.Entities;
 using Domain.Interfaces;
 using MediatR;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Newtonsoft.Json;
+using System.Globalization;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Application.Features.PaymentFeatures.Commands.ProcessVnPay;
 public class ProcessVnPayPaymentCommandHandler : IRequestHandler<ProcessVnPayPaymentCommand, DischargeWithDataResponseDto<(PaymentReturnDto,string)>>
@@ -19,12 +19,14 @@ public class ProcessVnPayPaymentCommandHandler : IRequestHandler<ProcessVnPayPay
     private readonly IConfiguration configuration;
     private readonly IMerchantRepository merchantRepository;
 
+
     public ProcessVnPayPaymentCommandHandler(IPaymentRepository paymentRepository, IMapper mapper, IConfiguration configuration, IMerchantRepository merchantRepository)
     {
         this.paymentRepository = paymentRepository;
         this.mapper = mapper;
         this.configuration = configuration;
         this.merchantRepository = merchantRepository;
+       
     }
 
     public async Task<DischargeWithDataResponseDto<(PaymentReturnDto,string)>> Handle(ProcessVnPayPaymentCommand request, CancellationToken cancellationToken)
@@ -48,11 +50,10 @@ public class ProcessVnPayPaymentCommandHandler : IRequestHandler<ProcessVnPayPay
                 {
                     var merchant = await merchantRepository.GetByIdAsync(payment.Merchant!.Id);
                     returnUrl = merchant!.MerchantReturnUrl ?? string.Empty;
-                    vnPayPayment.Signature = Guid.NewGuid().ToString();
+                    vnPayPayment.Signature = GenerateHelper.GenerateSecretKey();
                     vnPayPayment.PaymentStatus = "00";
                     vnPayPayment.PaymentId = payment.Id;
-
-                    
+                  
                 }
             }
             else

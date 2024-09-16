@@ -178,5 +178,6 @@ C:\Users\minht\Documents\WebsiteSellingClothes\Source\WebsiteSellingClothes\WebA
 C:\Users\minht\Documents\WebsiteSellingClothes\Source\WebsiteSellingClothes\WebAPI\bin\Debug\net8.0\Mapster.dll
 C:\Users\minht\Documents\WebsiteSellingClothes\Source\WebsiteSellingClothes\WebAPI\bin\Debug\net8.0\Mapster.Core.dll
 C:\Users\minht\Documents\WebsiteSellingClothes\Source\WebsiteSellingClothes\WebAPI\bin\Debug\net8.0\Mapster.DependencyInjection.dll
-C:\Users\minht\Documents\WebsiteSellingClothes\Source\WebsiteSellingClothes\WebAPI\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\minht\Documents\WebsiteSellingClothes\Source\WebsiteSellingClothes\WebAPI\obj\Debug\net8.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\minht\Documents\WebsiteSellingClothes\Source\WebsiteSellingClothes\WebAPI\bin\Debug\net8.0\WebAPI.xml
+C:\Users\minht\Documents\WebsiteSellingClothes\Source\WebsiteSellingClothes\WebAPI\obj\Debug\net8.0\WebAPI.xml

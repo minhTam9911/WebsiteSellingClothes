@@ -39,7 +39,6 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Ord
         var discount = await discountRepository.GetByIdAsync(request.OrderRequestDto!.DiscountId!);
         var quantityProduct = 0;
         decimal totalAmount = 0;
-        var quantityDiscount = 0;
         foreach (var item in request.OrderRequestDto!.CartIds!)
         {
             var cart = await cartRepository.GetByIdAsync(item, request.UserId);
@@ -53,7 +52,6 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Ord
                     if (discount.Products!.Where(x => x.Id == cart.Product.Id && x.Quantity >= cart.Quantity).Any())
                     {
                         amount = amount - amount * discount.Percentage / 100;
-                        quantityDiscount += 1;
                     }
 
                 }
@@ -97,9 +95,6 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Ord
         }
         if (discount != null)
         {
-            discount!.Id = string.Empty;
-            discount.Quantity -= quantityDiscount;
-           var discountUpdate = await discountRepository.UpdateQuantityAsync(request.OrderRequestDto.DiscountId!, discount.Quantity);
             result.Discount!.Id = request.OrderRequestDto.DiscountId!;
         }
        

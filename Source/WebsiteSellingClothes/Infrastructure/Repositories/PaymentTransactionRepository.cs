@@ -178,7 +178,7 @@ public class PaymentTransactionRepository : IPaymentTransactionRepository
 
     public async Task<PaymentTransaction?> InsertAsync(PaymentTransaction paymentTransaction)
     {
-        paymentTransaction.Id = GenerateHelper.GenerateKeyNumber("TRAN");
+        paymentTransaction.Id = GenerateHelper.GenerateKeyNumber("TRANS");
         appDbContext.PaymentTransactions.Add(paymentTransaction);
         var result = await appDbContext.SaveChangesAsync();
         return result > 0 ? paymentTransaction : null;

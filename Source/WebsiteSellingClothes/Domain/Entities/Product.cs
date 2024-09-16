@@ -27,5 +27,5 @@ public class Product
 	public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
 	public DateTime CreatedDate { get; set; }
 	public DateTime UpdatedDate { get; set; }
-	public virtual Discount? Discount { get; set; }
+	public virtual ICollection<Discount>? Discounts { get; set; } = new List<Discount>();
 }

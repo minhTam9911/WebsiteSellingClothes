@@ -90,4 +90,8 @@ public class MomoOneTimePaymentRequest
             return (false, createPaymentLinkResponse.ReasonPhrase);
         }
     }
+    public string GetSignature()
+    {
+        return this.signature;
+    }
 }

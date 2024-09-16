@@ -11,6 +11,7 @@ using Application.Features.PaymentFeatures.Commands.ProcessVnPay;
 using Application.Features.PaymentFeatures.Commands.ProcessVnPayIpn;
 using Application.Features.PaymentFeatures.Commands.ProcessZaloPay;
 using Application.Features.PaymentFeatures.Commands.ProcessZaloPayIpn;
+using Application.Features.PaymentNotificationFeatures.Commands.Create;
 using Application.Features.PaymentSignatureFeatures.Commands.Create;
 using Asp.Versioning;
 using AutoMapper;
@@ -76,6 +77,7 @@ public class PaymentsController : ApiControllerBase
                 PaidAmount = decimal.Parse(vnPayResponseDto.vnp_Amount.ToString()!),
                 PaymentId = vnPayResponseDto.vnp_TxnRef
             });
+            
             if (returnUrl.EndsWith("/")) returnUrl = returnUrl.Remove(returnUrl.Length - 1, 1);
             return Redirect($"{returnUrl}?{returnMode.ToQueryString()}");
         }

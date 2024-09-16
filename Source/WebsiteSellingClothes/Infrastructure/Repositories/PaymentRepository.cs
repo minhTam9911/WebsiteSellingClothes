@@ -197,7 +197,7 @@ public class PaymentRepository : IPaymentRepository
 
     public async Task<int> SetPaidAsync(string id, decimal paidAmount)
     {
-        var result = await appDbContext.Payments.Where(x => x.Id == id).ExecuteUpdateAsync(setter => setter.SetProperty(o => o.PaymentStatus, "Paid").SetProperty(x => x.PaidAmount, paidAmount));
+        var result = await appDbContext.Payments.Where(x => x.Id == id).ExecuteUpdateAsync(setter => setter.SetProperty(p => p.PaymentStatus, "Paid").SetProperty(p => p.PaidAmount, paidAmount));
         return result;
     }
 

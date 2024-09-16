@@ -3,124 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\exceptionhanlders\\appexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\exceptionhanlders\\appexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\exceptionhanlders\\appentitynotfoundexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\exceptionhanlders\\appentitynotfoundexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\configureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\configureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\exceptions\\entitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\exceptions\\entitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\infrastructure\\configureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\configureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\profiles\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\profiles\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\infrastructure\\repositories\\paymentnotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\paymentnotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\features\\authfeatures\\commands\\login\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\features\\authfeatures\\commands\\login\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\features\\authfeatures\\commands\\login\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\features\\authfeatures\\commands\\login\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\authscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\authscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\exceptions\\invalidformatexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\exceptions\\invalidformatexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\exceptionhanlders\\appunauthorizedexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\exceptionhanlders\\appunauthorizedexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\exceptionhanlders\\appnotimplementedexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\exceptionhanlders\\appnotimplementedexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\feedbackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\feedbackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\exceptionhanlders\\appmethodnotallowexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\exceptionhanlders\\appmethodnotallowexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\favouritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\favouritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\exceptionhanlders\\appioexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\exceptionhanlders\\appioexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\commons\\exceptionhanlders\\appbadrequestexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\commons\\exceptionhanlders\\appbadrequestexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\features\\paymentfeatures\\commands\\create\\createpaymentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\features\\paymentfeatures\\commands\\create\\createpaymentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCEC9B9B-13E3-4950-97B6-691511D15C08}|Common\\Common.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\common\\helpers\\hashhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCEC9B9B-13E3-4950-97B6-691511D15C08}|Common\\Common.csproj|solutionrelative:common\\helpers\\hashhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\dtos\\requests\\paymentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\dtos\\requests\\paymentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCEC9B9B-13E3-4950-97B6-691511D15C08}|Common\\Common.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\common\\helpers\\generatehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCEC9B9B-13E3-4950-97B6-691511D15C08}|Common\\Common.csproj|solutionrelative:common\\helpers\\generatehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\dtos\\requests\\orderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\dtos\\requests\\orderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\domain\\entities\\paymentnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\paymentnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\domain\\entities\\paymentsignature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\paymentsignature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\domain\\entities\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\domain\\entities\\paymentdestination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01F42D7E-F3E4-4620-B768-B347854D129F}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\paymentdestination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\application\\features\\paymentfeatures\\commands\\create\\createpaymentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E1DEEB3-7DDE-4A96-B699-1770A869D078}|Application\\Application.csproj|solutionrelative:application\\features\\paymentfeatures\\commands\\create\\createpaymentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\webapi\\controllers\\v1\\discountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B9808A-F973-4D0D-989E-514BDB613A4E}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\v1\\discountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|c:\\users\\minht\\documents\\websitesellingclothes\\source\\websitesellingclothes\\infrastructure\\configurations\\vnpayconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E23F1A3-94D0-4490-B31F-23514504CD1B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\configurations\\vnpayconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,394 +62,165 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginCommand.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Features\\AuthFeatures\\Commands\\Login\\LoginCommand.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\AuthFeatures\\Commands\\Login\\LoginCommand.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Features\\AuthFeatures\\Commands\\Login\\LoginCommand.cs",
-              "RelativeToolTip": "Application\\Features\\AuthFeatures\\Commands\\Login\\LoginCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:26:09.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AuthsController.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\AuthsController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\AuthsController.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\AuthsController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\V1\\AuthsController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:25:11.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AppEntityNotFoundExceptionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppEntityNotFoundExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Commons\\ExceptionHanlders\\AppEntityNotFoundExceptionHandler.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppEntityNotFoundExceptionHandler.cs",
-              "RelativeToolTip": "Application\\Commons\\ExceptionHanlders\\AppEntityNotFoundExceptionHandler.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAwwA8AAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:21:44.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppExceptionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Commons\\ExceptionHanlders\\AppExceptionHandler.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppExceptionHandler.cs",
-              "RelativeToolTip": "Application\\Commons\\ExceptionHanlders\\AppExceptionHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:09:09.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConfigureService.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\ConfigureService.cs",
-              "RelativeDocumentMoniker": "Application\\ConfigureService.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\ConfigureService.cs",
-              "RelativeToolTip": "Application\\ConfigureService.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAACsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:13:04.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EntityNotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\Exceptions\\EntityNotFoundException.cs",
-              "RelativeDocumentMoniker": "Application\\Commons\\Exceptions\\EntityNotFoundException.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\Exceptions\\EntityNotFoundException.cs",
-              "RelativeToolTip": "Application\\Commons\\Exceptions\\EntityNotFoundException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:14:14.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConfigureService.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\ConfigureService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\ConfigureService.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\ConfigureService.cs",
-              "RelativeToolTip": "Infrastructure\\ConfigureService.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAgwBkAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:28:53.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Features\\AuthFeatures\\Commands\\Login\\LoginCommandHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\AuthFeatures\\Commands\\Login\\LoginCommandHandler.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Features\\AuthFeatures\\Commands\\Login\\LoginCommandHandler.cs",
-              "RelativeToolTip": "Application\\Features\\AuthFeatures\\Commands\\Login\\LoginCommandHandler.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAABgAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:26:10.78Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PaymentNotificationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\Repositories\\PaymentNotificationRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\PaymentNotificationRepository.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\Repositories\\PaymentNotificationRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\PaymentNotificationRepository.cs",
-              "ViewState": "AQIAALoAAAAAAAAAAAAgwMgAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:27:59.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "AutoMapperProfile.cs",
               "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\Profiles\\AutoMapperProfile.cs",
               "RelativeDocumentMoniker": "Application\\Commons\\Profiles\\AutoMapperProfile.cs",
               "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\Profiles\\AutoMapperProfile.cs",
               "RelativeToolTip": "Application\\Commons\\Profiles\\AutoMapperProfile.cs",
-              "ViewState": "AQIAAJgAAAAAAAAAAAAgwL4AAAAHAAAA",
+              "ViewState": "AgIAANUAAAAAAAAAAAAgwN4AAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:28:51.902Z",
+              "WhenOpened": "2024-09-16T11:50:15.752Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T11:49:13.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BrandsController.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\BrandsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\BrandsController.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\BrandsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\V1\\BrandsController.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T11:22:02.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthsController.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\AuthsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\AuthsController.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\AuthsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\V1\\AuthsController.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T11:21:52.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\OrdersController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\OrdersController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\V1\\OrdersController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T11:21:33.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderDetailsController.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\OrderDetailsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\OrderDetailsController.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\OrderDetailsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\V1\\OrderDetailsController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAEYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T10:48:22.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FeedbacksController.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\FeedbacksController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\FeedbacksController.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\FeedbacksController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\V1\\FeedbacksController.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAJgAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T08:55:06.151Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "InvalidFormatException.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\Exceptions\\InvalidFormatException.cs",
-              "RelativeDocumentMoniker": "Application\\Commons\\Exceptions\\InvalidFormatException.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\Exceptions\\InvalidFormatException.cs",
-              "RelativeToolTip": "Application\\Commons\\Exceptions\\InvalidFormatException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "FavouritesController.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\FavouritesController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\FavouritesController.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\FavouritesController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\V1\\FavouritesController.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAADwv4cAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:17:21.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T08:46:57.372Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AppIOExceptionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppIOExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Commons\\ExceptionHanlders\\AppIOExceptionHandler.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppIOExceptionHandler.cs",
-              "RelativeToolTip": "Application\\Commons\\ExceptionHanlders\\AppIOExceptionHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
+              "DocumentIndex": 11,
+              "Title": "DiscountsController.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\DiscountsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\DiscountsController.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\DiscountsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\V1\\DiscountsController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAADwv5cAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:09:10.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T08:36:58.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AppMethodNotAllowExceptionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppMethodNotAllowExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Commons\\ExceptionHanlders\\AppMethodNotAllowExceptionHandler.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppMethodNotAllowExceptionHandler.cs",
-              "RelativeToolTip": "Application\\Commons\\ExceptionHanlders\\AppMethodNotAllowExceptionHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAgwHEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:09:20.265Z",
+              "WhenOpened": "2024-09-13T07:48:50.628Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "AppNotImplementedExceptionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppNotImplementedExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Commons\\ExceptionHanlders\\AppNotImplementedExceptionHandler.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppNotImplementedExceptionHandler.cs",
-              "RelativeToolTip": "Application\\Commons\\ExceptionHanlders\\AppNotImplementedExceptionHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:09:22.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AppUnAuthorizedExceptionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppUnAuthorizedExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Commons\\ExceptionHanlders\\AppUnAuthorizedExceptionHandler.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppUnAuthorizedExceptionHandler.cs",
-              "RelativeToolTip": "Application\\Commons\\ExceptionHanlders\\AppUnAuthorizedExceptionHandler.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:09:24.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AppBadRequestExceptionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppBadRequestExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Commons\\ExceptionHanlders\\AppBadRequestExceptionHandler.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Commons\\ExceptionHanlders\\AppBadRequestExceptionHandler.cs",
-              "RelativeToolTip": "Application\\Commons\\ExceptionHanlders\\AppBadRequestExceptionHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T05:09:02.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "HashHelper.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Common\\Helpers\\HashHelper.cs",
-              "RelativeDocumentMoniker": "Common\\Helpers\\HashHelper.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Common\\Helpers\\HashHelper.cs",
-              "RelativeToolTip": "Common\\Helpers\\HashHelper.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T04:46:56.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "OrderRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\DTOs\\Requests\\OrderRequestDto.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\Requests\\OrderRequestDto.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\DTOs\\Requests\\OrderRequestDto.cs",
-              "RelativeToolTip": "Application\\DTOs\\Requests\\OrderRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T04:34:04.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "GenerateHelper.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Common\\Helpers\\GenerateHelper.cs",
-              "RelativeDocumentMoniker": "Common\\Helpers\\GenerateHelper.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Common\\Helpers\\GenerateHelper.cs",
-              "RelativeToolTip": "Common\\Helpers\\GenerateHelper.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAACEAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T04:30:15.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "PaymentsController.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\PaymentsController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\PaymentsController.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\PaymentsController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\V1\\PaymentsController.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAIoAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T04:25:07.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "PaymentNotification.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\PaymentNotification.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\PaymentNotification.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\PaymentNotification.cs",
-              "RelativeToolTip": "Domain\\Entities\\PaymentNotification.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:16:48.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CreatePaymentCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Features\\PaymentFeatures\\Commands\\Create\\CreatePaymentCommandHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\PaymentFeatures\\Commands\\Create\\CreatePaymentCommandHandler.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Features\\PaymentFeatures\\Commands\\Create\\CreatePaymentCommandHandler.cs",
-              "RelativeToolTip": "Application\\Features\\PaymentFeatures\\Commands\\Create\\CreatePaymentCommandHandler.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAAAC4AAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:24:16.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "PaymentSignature.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\PaymentSignature.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\PaymentSignature.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\PaymentSignature.cs",
-              "RelativeToolTip": "Domain\\Entities\\PaymentSignature.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:21:03.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PaymentRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\DTOs\\Requests\\PaymentRequestDto.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\Requests\\PaymentRequestDto.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\DTOs\\Requests\\PaymentRequestDto.cs",
-              "RelativeToolTip": "Application\\DTOs\\Requests\\PaymentRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:24:24.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\Payment.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Payment.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\Payment.cs",
-              "RelativeToolTip": "Domain\\Entities\\Payment.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB0AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:15:23.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "PaymentTransaction.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\PaymentTransaction.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\PaymentTransaction.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\PaymentTransaction.cs",
-              "RelativeToolTip": "Domain\\Entities\\PaymentTransaction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:20:58.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "PaymentDestination.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\PaymentDestination.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\PaymentDestination.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Domain\\Entities\\PaymentDestination.cs",
-              "RelativeToolTip": "Domain\\Entities\\PaymentDestination.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:29:02.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CreatePaymentCommand.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Features\\PaymentFeatures\\Commands\\Create\\CreatePaymentCommand.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\PaymentFeatures\\Commands\\Create\\CreatePaymentCommand.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Application\\Features\\PaymentFeatures\\Commands\\Create\\CreatePaymentCommand.cs",
-              "RelativeToolTip": "Application\\Features\\PaymentFeatures\\Commands\\Create\\CreatePaymentCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:24:19.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Infrastructure\\Data\\AppDbContext.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAABsAAAA4AAAA",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:15:56.601Z"
+              "WhenOpened": "2024-09-13T07:48:44.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "VnPayConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\Configurations\\VnPayConfiguration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Configurations\\VnPayConfiguration.cs",
-              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\Infrastructure\\Configurations\\VnPayConfiguration.cs",
-              "RelativeToolTip": "Infrastructure\\Configurations\\VnPayConfiguration.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\CategoriesController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\V1\\CategoriesController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T09:15:47.47Z"
+              "WhenOpened": "2024-09-13T07:48:20.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartsController.cs",
+              "DocumentMoniker": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\CartsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\V1\\CartsController.cs",
+              "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Controllers\\V1\\CartsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\V1\\CartsController.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAAAKMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T07:48:19.502Z"
             }
           ]
         }
