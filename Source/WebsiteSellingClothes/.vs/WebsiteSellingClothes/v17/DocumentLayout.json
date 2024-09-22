@@ -62,8 +62,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -74,8 +78,7 @@
               "RelativeToolTip": "Application\\Commons\\Profiles\\AutoMapperProfile.cs",
               "ViewState": "AgIAANUAAAAAAAAAAAAgwN4AAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T11:50:15.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-16T11:50:15.752Z"
             },
             {
               "$type": "Document",
@@ -181,7 +184,7 @@
               "RelativeDocumentMoniker": "WebAPI\\Program.cs",
               "ToolTip": "C:\\Users\\minht\\Documents\\WebsiteSellingClothes\\Source\\WebsiteSellingClothes\\WebAPI\\Program.cs",
               "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAgwHEAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAgwHMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T07:48:50.628Z",
               "EditorCaption": ""

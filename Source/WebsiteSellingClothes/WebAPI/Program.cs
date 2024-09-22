@@ -113,6 +113,7 @@ if (app.Environment.IsDevelopment())
 
 //app.UseExceptionHandler(_ => { });
 //app.UseMiddleware<ExceptionMiddleware>();
+app.UseCors("Open");
 app.UseRouting();
 app.UseApplication();
 app.UseHttpsRedirection();
